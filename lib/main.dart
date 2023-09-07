@@ -29,13 +29,18 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(title: Text('Posts'),
       ),
       body: Column(children: [
-        Row(children: [
-          CircleAvatar(
-            backgroundImage: NetworkImage('https://images.pexels.com/photos/18082106/pexels-photo-18082106/free-photo-of-man-in-black-clothes-sitting-with-camera.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
-            radius: 20,
-          ),
-          Text("Ammar Al Hasani",style: TextStyle(fontSize: 20),)
-        ],),
+        Container(
+          child: Column(children: [
+        Container(margin: EdgeInsets.all(5),
+          child: Row(children: [
+            CircleAvatar(
+              backgroundImage: NetworkImage('https://images.pexels.com/photos/18082106/pexels-photo-18082106/free-photo-of-man-in-black-clothes-sitting-with-camera.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+              radius: 18,
+              
+            ),
+            Text("  Ammar Al Hasani",style: TextStyle(fontSize: 15),)
+          ],),
+        ),
         Image(image: NetworkImage("https://images.pexels.com/photos/18129270/pexels-photo-18129270/free-photo-of-neushwanstein-castle-on-a-cloudy-day.jpeg")),
         Row(
           children:[
@@ -64,6 +69,23 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ],
       ),
+  margin: EdgeInsets.all(10),
+  
+  height: 420,
+  decoration: BoxDecoration(
+    color: Colors.white,
+    
+    boxShadow: [
+      BoxShadow(
+        color: Colors.grey.withOpacity(0.5),
+        spreadRadius: 5,
+        blurRadius: 7,
+        offset: Offset(3,3), // changes position of shadow
+      ),
+    ],
+  ),
+)
+      ],)
     );
   }
 }
